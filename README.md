@@ -39,7 +39,7 @@ This asymmetry guarantees that at least one philosopher can always proceed, brea
 
 ## 💻 Option 1: All-in-One JVM Implementation
 
-Before going distributed, we built a single-JVM version. **The same deadlock-prevention strategy is shared across both Akka and P implementations (bonus)**:
+Before going distributed, we built a single-JVM version. **The same algorithm and deadlock-prevention strategy is shared across both Akka and P implementations (bonus)**:
 
 ![Architecture – Local](figures/screen8.png)
 
