@@ -39,7 +39,7 @@ This asymmetry guarantees that at least one philosopher can always proceed, brea
 
 ## 💻 Option 1: All-in-One JVM Implementation
 
-Before going distributed, we built a single-JVM version. **The same deadlock-prevention strategy is shared across both Akka and P implementations**:
+Before going distributed, we built a single-JVM version. **The same deadlock-prevention strategy is shared across both Akka and P implementations (bonus)**:
 
 ![Architecture – Local](figures/screen8.png)
 
@@ -58,7 +58,7 @@ You'll see philosophers thinking, eating, and releasing forks:
 
 ![Logs – Philosopher Eating](figures/screen1.png)
 
-You can also pass a different number of philosophers:
+You can also pass a different number of philosophers(bonus):
 
 ```bash
 sbt "runMain com.example.Main 7"  
@@ -228,7 +228,7 @@ You can also visualize execution with Peasy:
 ---
 
 
-### 🔁 Parametric Extension in P
+###  Parametric Extension in P (bonus)
 
 While P doesn’t support runtime input like Scala’s `readInt()`, you can parameterize the number of philosophers by modifying the `TestV1` machine:
 
