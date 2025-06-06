@@ -1,5 +1,4 @@
-# Solving the Dining Philosophers Problem with Akka and P  
-### *(Cloud Computing Project – 2025)*
+# Solving the Dining Philosophers Problem with Akka and P *(Cloud Computing Project – 2025)*
 
 Imagine five philosophers sitting at a round table. Between each pair, a single fork. To eat, a philosopher must hold **both** the left and right forks. But here’s the twist: if everyone reaches for the same fork first, they’ll all wait forever; a classic **deadlock**.
 
