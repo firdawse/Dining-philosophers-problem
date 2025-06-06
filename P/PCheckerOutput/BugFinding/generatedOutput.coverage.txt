@@ -1,0 +1,69 @@
+Total event coverage: 35.7%
+===========================
+StateMachine: Fork
+==================
+Event coverage: 66.7%
+
+	State: Free
+		State event coverage: 100.0%
+		Events received: ePickUp
+		Events sent: ForkGranted
+		Next states: Held
+
+	State: Held
+		State event coverage: 50.0%
+		Events received: ePickUp
+		Events sent: ForkBusy
+		Events not covered: ePutDown
+		Previous states: Free
+
+Monitor: NoDeadlock
+===================
+Event coverage: 50.0%
+
+	State: Monitoring
+		State event coverage: 50.0%
+		Events received: ForkGranted
+		Events not covered: ForkReleased
+		Previous states: Monitoring
+		Next states: Monitoring
+
+StateMachine: Philosopher
+=========================
+Event coverage: 22.2%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+		Next states: TryLeftFirst
+
+	State: TryLeftFirst
+		State event coverage: 50.0%
+		Events received: ForkGranted
+		Events sent: ePickUp
+		Events not covered: ForkBusy
+		Previous states: Init
+		Next states: TryRight
+
+	State: TryRightFirst is uncovered
+		Events not covered: ForkBusy, ForkGranted
+
+	State: TryLeft is uncovered
+		Events not covered: ForkBusy, ForkGranted
+
+	State: TryRight
+		State event coverage: 50.0%
+		Events received: ForkBusy
+		Events sent: ePickUp
+		Events not covered: ForkGranted
+		Previous states: TryLeftFirst
+
+	State: Eating is uncovered
+		Events not covered: ForkReleased
+
+StateMachine: TestV1
+====================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+

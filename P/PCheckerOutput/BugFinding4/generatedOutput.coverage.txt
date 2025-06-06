@@ -1,0 +1,80 @@
+Total event coverage: 100.0%
+============================
+StateMachine: Fork
+==================
+Event coverage: 100.0%
+
+	State: Free
+		State event coverage: 100.0%
+		Events received: ePickUp
+		Events sent: ForkGranted
+		Previous states: Held
+		Next states: Held
+
+	State: Held
+		State event coverage: 100.0%
+		Events received: ePickUp, ePutDown
+		Events sent: ForkBusy, ForkReleased
+		Previous states: Free
+		Next states: Free
+
+Monitor: NoDeadlock
+===================
+Event coverage: 100.0%
+
+	State: Monitoring
+		State event coverage: 100.0%
+		Events received: ForkGranted, ForkReleased
+		Previous states: Monitoring
+		Next states: Monitoring
+
+StateMachine: Philosopher
+=========================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+		Next states: TryLeftFirst, TryRightFirst
+
+	State: TryLeftFirst
+		State event coverage: 100.0%
+		Events received: ForkBusy, ForkGranted
+		Events sent: ePickUp
+		Previous states: Eating, Init
+		Next states: TryRight
+
+	State: TryRightFirst
+		State event coverage: 100.0%
+		Events received: ForkBusy, ForkGranted
+		Events sent: ePickUp
+		Previous states: Eating, Init
+		Next states: TryLeft
+
+	State: TryLeft
+		State event coverage: 100.0%
+		Events received: ForkBusy, ForkGranted
+		Events sent: ePickUp
+		Previous states: TryRightFirst
+		Next states: Eating
+
+	State: TryRight
+		State event coverage: 100.0%
+		Events received: ForkBusy, ForkGranted
+		Events sent: ePickUp
+		Previous states: TryLeftFirst
+		Next states: Eating
+
+	State: Eating
+		State event coverage: 100.0%
+		Events received: ForkReleased
+		Events sent: ePutDown
+		Previous states: TryLeft, TryRight
+		Next states: TryLeftFirst, TryRightFirst
+
+StateMachine: TestV2
+====================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+

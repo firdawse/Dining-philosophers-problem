@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\firda\Bureau\scala\src\main\scala\com\example\Philosopher.scala:25:43: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Int(500)[0m
+[0m[[0m[31merror[0m] [0m[0m required: scala.concurrent.duration.FiniteDuration[0m
+[0m[[0m[31merror[0m] [0m[0m    context.system.scheduler.scheduleOnce(500, self, "eat")[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -1,0 +1,1 @@
+module Dining = { Philosopher, Fork };

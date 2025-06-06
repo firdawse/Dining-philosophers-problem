@@ -1,0 +1,1143 @@
+[
+  {
+    "type": "CreateMonitor",
+    "details": {
+      "log": "NoDeadlock was created.",
+      "payload": "null",
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 1
+      }
+    }
+  },
+  {
+    "type": "MonitorStateTransition",
+    "details": {
+      "log": "NoDeadlock enters state \u0027Monitoring\u0027.",
+      "state": "Monitoring",
+      "payload": "null",
+      "isEntry": true,
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 2
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "TestV1(1) was created by task \u00272\u0027.",
+      "id": "TestV1(1)",
+      "payload": "null",
+      "clock": {
+        "TestV1(1)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "TestV1(1) enters state \u0027Init\u0027.",
+      "id": "TestV1(1)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "TestV1(1)": 2
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Fork(2) was created by TestV1(1).",
+      "id": "Fork(2)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Fork(2)": 1
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Fork(3) was created by TestV1(1).",
+      "id": "Fork(3)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Fork(3)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(3) enters state \u0027Free\u0027.",
+      "id": "Fork(3)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(3)": 2
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(2) enters state \u0027Free\u0027.",
+      "id": "Fork(2)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(2)": 2
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Fork(4) was created by TestV1(1).",
+      "id": "Fork(4)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Fork(4)": 1
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Fork(5) was created by TestV1(1).",
+      "id": "Fork(5)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Fork(5)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(4) enters state \u0027Free\u0027.",
+      "id": "Fork(4)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(4)": 2
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Fork(6) was created by TestV1(1).",
+      "id": "Fork(6)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Fork(6)": 1
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Philosopher(7) was created by TestV1(1).",
+      "id": "Philosopher(7)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Philosopher(7)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(7) enters state \u0027Init\u0027.",
+      "id": "Philosopher(7)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(7)": 2
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(7) is transitioning from state \u0027Init\u0027 to state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(7)",
+      "startState": "Init",
+      "endState": "TryLeftFirst",
+      "payload": "null",
+      "clock": {
+        "Philosopher(7)": 3
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(7) exits state \u0027Init\u0027.",
+      "id": "Philosopher(7)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(7)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(7) enters state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(7)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(7)": 5
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Philosopher(8) was created by TestV1(1).",
+      "id": "Philosopher(8)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Philosopher(8)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(8) enters state \u0027Init\u0027.",
+      "id": "Philosopher(8)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(8)": 2
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(8) is transitioning from state \u0027Init\u0027 to state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(8)",
+      "startState": "Init",
+      "endState": "TryLeftFirst",
+      "payload": "null",
+      "clock": {
+        "Philosopher(8)": 3
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(8) exits state \u0027Init\u0027.",
+      "id": "Philosopher(8)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(8)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(8) enters state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(8)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(8)": 5
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(5) enters state \u0027Free\u0027.",
+      "id": "Fork(5)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(5)": 2
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(6) enters state \u0027Free\u0027.",
+      "id": "Fork(6)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(6)": 2
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Philosopher(9) was created by TestV1(1).",
+      "id": "Philosopher(9)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Philosopher(9)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(9) enters state \u0027Init\u0027.",
+      "id": "Philosopher(9)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(9)": 2
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(9) is transitioning from state \u0027Init\u0027 to state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(9)",
+      "startState": "Init",
+      "endState": "TryLeftFirst",
+      "payload": "null",
+      "clock": {
+        "Philosopher(9)": 3
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(9) exits state \u0027Init\u0027.",
+      "id": "Philosopher(9)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(9)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(9) enters state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(9)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(9)": 5
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Philosopher(10) was created by TestV1(1).",
+      "id": "Philosopher(10)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Philosopher(10)": 1
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(10) enters state \u0027Init\u0027.",
+      "id": "Philosopher(10)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(10)": 2
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(10) is transitioning from state \u0027Init\u0027 to state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(10)",
+      "startState": "Init",
+      "endState": "TryLeftFirst",
+      "payload": "null",
+      "clock": {
+        "Philosopher(10)": 3
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(10) exits state \u0027Init\u0027.",
+      "id": "Philosopher(10)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(10)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(10) enters state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(10)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(10)": 5
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Philosopher(7)\u0027 in state \u0027TryLeftFirst\u0027 sent event \u0027ePickUp with payload (Philosopher(7))\u0027 to \u0027Fork(2)\u0027.",
+      "event": "ePickUp",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(7)",
+      "sender": "Philosopher(7)",
+      "target": "Fork(2)",
+      "isTargetHalted": false,
+      "clock": {
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "CreateStateMachine",
+    "details": {
+      "log": "Philosopher(11) was created by TestV1(1).",
+      "id": "Philosopher(11)",
+      "creatorName": "TestV1(1)",
+      "creatorType": "TestV1",
+      "payload": "null",
+      "clock": {
+        "Philosopher(11)": 1
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Fork(2)\u0027 dequeued event \u0027ePickUp with payload (Philosopher(7))\u0027 in state \u0027Free\u0027.",
+      "id": "Fork(2)",
+      "event": "ePickUp",
+      "state": "Free",
+      "payload": "Philosopher(7)",
+      "clock": {
+        "Fork(2)": 3,
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "MonitorProcessEvent",
+    "details": {
+      "log": "NoDeadlock is processing event \u0027ForkGranted with payload (Philosopher(7))\u0027 in state \u0027Monitoring\u0027.",
+      "event": "ForkGranted",
+      "state": "Monitoring",
+      "payload": "Philosopher(7)",
+      "sender": "Fork(2)",
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 3,
+        "Fork(2)": 3,
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Philosopher(8)\u0027 in state \u0027TryLeftFirst\u0027 sent event \u0027ePickUp with payload (Philosopher(8))\u0027 to \u0027Fork(3)\u0027.",
+      "event": "ePickUp",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(8)",
+      "sender": "Philosopher(8)",
+      "target": "Fork(3)",
+      "isTargetHalted": false,
+      "clock": {
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Philosopher(9)\u0027 in state \u0027TryLeftFirst\u0027 sent event \u0027ePickUp with payload (Philosopher(9))\u0027 to \u0027Fork(4)\u0027.",
+      "event": "ePickUp",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(9)",
+      "sender": "Philosopher(9)",
+      "target": "Fork(4)",
+      "isTargetHalted": false,
+      "clock": {
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Fork(4)\u0027 dequeued event \u0027ePickUp with payload (Philosopher(9))\u0027 in state \u0027Free\u0027.",
+      "id": "Fork(4)",
+      "event": "ePickUp",
+      "state": "Free",
+      "payload": "Philosopher(9)",
+      "clock": {
+        "Fork(4)": 3,
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "MonitorProcessEvent",
+    "details": {
+      "log": "NoDeadlock is processing event \u0027ForkGranted with payload (Philosopher(9))\u0027 in state \u0027Monitoring\u0027.",
+      "event": "ForkGranted",
+      "state": "Monitoring",
+      "payload": "Philosopher(9)",
+      "sender": "Fork(4)",
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 4,
+        "Fork(2)": 3,
+        "Philosopher(7)": 6,
+        "Fork(4)": 3,
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Fork(3)\u0027 dequeued event \u0027ePickUp with payload (Philosopher(8))\u0027 in state \u0027Free\u0027.",
+      "id": "Fork(3)",
+      "event": "ePickUp",
+      "state": "Free",
+      "payload": "Philosopher(8)",
+      "clock": {
+        "Fork(3)": 3,
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "MonitorProcessEvent",
+    "details": {
+      "log": "NoDeadlock is processing event \u0027ForkGranted with payload (Philosopher(8))\u0027 in state \u0027Monitoring\u0027.",
+      "event": "ForkGranted",
+      "state": "Monitoring",
+      "payload": "Philosopher(8)",
+      "sender": "Fork(3)",
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 5,
+        "Fork(2)": 3,
+        "Philosopher(7)": 6,
+        "Fork(4)": 3,
+        "Philosopher(9)": 6,
+        "Fork(3)": 3,
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Fork(4)\u0027 in state \u0027Free\u0027 sent event \u0027ForkGranted with payload (Philosopher(9))\u0027 to \u0027Philosopher(9)\u0027.",
+      "event": "ForkGranted",
+      "state": "Free",
+      "payload": "Philosopher(9)",
+      "sender": "Fork(4)",
+      "target": "Philosopher(9)",
+      "isTargetHalted": false,
+      "clock": {
+        "Fork(4)": 4,
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Fork(4) is transitioning from state \u0027Free\u0027 to state \u0027Held\u0027.",
+      "id": "Fork(4)",
+      "startState": "Free",
+      "endState": "Held",
+      "payload": "null",
+      "clock": {
+        "Fork(4)": 5,
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(4) exits state \u0027Free\u0027.",
+      "id": "Fork(4)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Fork(4)": 6,
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(4) enters state \u0027Held\u0027.",
+      "id": "Fork(4)",
+      "state": "Held",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(4)": 7,
+        "Philosopher(9)": 6
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Philosopher(10)\u0027 in state \u0027TryLeftFirst\u0027 sent event \u0027ePickUp with payload (Philosopher(10))\u0027 to \u0027Fork(5)\u0027.",
+      "event": "ePickUp",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(10)",
+      "sender": "Philosopher(10)",
+      "target": "Fork(5)",
+      "isTargetHalted": false,
+      "clock": {
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Fork(5)\u0027 dequeued event \u0027ePickUp with payload (Philosopher(10))\u0027 in state \u0027Free\u0027.",
+      "id": "Fork(5)",
+      "event": "ePickUp",
+      "state": "Free",
+      "payload": "Philosopher(10)",
+      "clock": {
+        "Fork(5)": 3,
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "MonitorProcessEvent",
+    "details": {
+      "log": "NoDeadlock is processing event \u0027ForkGranted with payload (Philosopher(10))\u0027 in state \u0027Monitoring\u0027.",
+      "event": "ForkGranted",
+      "state": "Monitoring",
+      "payload": "Philosopher(10)",
+      "sender": "Fork(5)",
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 6,
+        "Fork(2)": 3,
+        "Philosopher(7)": 6,
+        "Fork(4)": 3,
+        "Philosopher(9)": 6,
+        "Fork(3)": 3,
+        "Philosopher(8)": 6,
+        "Fork(5)": 3,
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(11) enters state \u0027Init\u0027.",
+      "id": "Philosopher(11)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(11)": 2
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(11) is transitioning from state \u0027Init\u0027 to state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(11)",
+      "startState": "Init",
+      "endState": "TryLeftFirst",
+      "payload": "null",
+      "clock": {
+        "Philosopher(11)": 3
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(11) exits state \u0027Init\u0027.",
+      "id": "Philosopher(11)",
+      "state": "Init",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(11)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(11) enters state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(11)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(11)": 5
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Fork(3)\u0027 in state \u0027Free\u0027 sent event \u0027ForkGranted with payload (Philosopher(8))\u0027 to \u0027Philosopher(8)\u0027.",
+      "event": "ForkGranted",
+      "state": "Free",
+      "payload": "Philosopher(8)",
+      "sender": "Fork(3)",
+      "target": "Philosopher(8)",
+      "isTargetHalted": false,
+      "clock": {
+        "Fork(3)": 4,
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Fork(3) is transitioning from state \u0027Free\u0027 to state \u0027Held\u0027.",
+      "id": "Fork(3)",
+      "startState": "Free",
+      "endState": "Held",
+      "payload": "null",
+      "clock": {
+        "Fork(3)": 5,
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(3) exits state \u0027Free\u0027.",
+      "id": "Fork(3)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Fork(3)": 6,
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(3) enters state \u0027Held\u0027.",
+      "id": "Fork(3)",
+      "state": "Held",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(3)": 7,
+        "Philosopher(8)": 6
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Fork(5)\u0027 in state \u0027Free\u0027 sent event \u0027ForkGranted with payload (Philosopher(10))\u0027 to \u0027Philosopher(10)\u0027.",
+      "event": "ForkGranted",
+      "state": "Free",
+      "payload": "Philosopher(10)",
+      "sender": "Fork(5)",
+      "target": "Philosopher(10)",
+      "isTargetHalted": false,
+      "clock": {
+        "Fork(5)": 4,
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Fork(5) is transitioning from state \u0027Free\u0027 to state \u0027Held\u0027.",
+      "id": "Fork(5)",
+      "startState": "Free",
+      "endState": "Held",
+      "payload": "null",
+      "clock": {
+        "Fork(5)": 5,
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(5) exits state \u0027Free\u0027.",
+      "id": "Fork(5)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Fork(5)": 6,
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(5) enters state \u0027Held\u0027.",
+      "id": "Fork(5)",
+      "state": "Held",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(5)": 7,
+        "Philosopher(10)": 6
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Philosopher(11)\u0027 in state \u0027TryLeftFirst\u0027 sent event \u0027ePickUp with payload (Philosopher(11))\u0027 to \u0027Fork(6)\u0027.",
+      "event": "ePickUp",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(11)",
+      "sender": "Philosopher(11)",
+      "target": "Fork(6)",
+      "isTargetHalted": false,
+      "clock": {
+        "Philosopher(11)": 6
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Philosopher(9)\u0027 dequeued event \u0027ForkGranted with payload (Philosopher(9))\u0027 in state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(9)",
+      "event": "ForkGranted",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(9)",
+      "clock": {
+        "Philosopher(9)": 7,
+        "Fork(4)": 4
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(9) is transitioning from state \u0027TryLeftFirst\u0027 to state \u0027TryRight\u0027.",
+      "id": "Philosopher(9)",
+      "startState": "TryLeftFirst",
+      "endState": "TryRight",
+      "payload": "null",
+      "clock": {
+        "Philosopher(9)": 8,
+        "Fork(4)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(9) exits state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(9)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(9)": 9,
+        "Fork(4)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(9) enters state \u0027TryRight\u0027.",
+      "id": "Philosopher(9)",
+      "state": "TryRight",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(9)": 10,
+        "Fork(4)": 4
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Philosopher(9)\u0027 in state \u0027TryRight\u0027 sent event \u0027ePickUp with payload (Philosopher(9))\u0027 to \u0027Fork(5)\u0027.",
+      "event": "ePickUp",
+      "state": "TryRight",
+      "payload": "Philosopher(9)",
+      "sender": "Philosopher(9)",
+      "target": "Fork(5)",
+      "isTargetHalted": false,
+      "clock": {
+        "Philosopher(9)": 11,
+        "Fork(4)": 4
+      }
+    }
+  },
+  {
+    "type": "SendEvent",
+    "details": {
+      "log": "\u0027Fork(2)\u0027 in state \u0027Free\u0027 sent event \u0027ForkGranted with payload (Philosopher(7))\u0027 to \u0027Philosopher(7)\u0027.",
+      "event": "ForkGranted",
+      "state": "Free",
+      "payload": "Philosopher(7)",
+      "sender": "Fork(2)",
+      "target": "Philosopher(7)",
+      "isTargetHalted": false,
+      "clock": {
+        "Fork(2)": 4,
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Fork(2) is transitioning from state \u0027Free\u0027 to state \u0027Held\u0027.",
+      "id": "Fork(2)",
+      "startState": "Free",
+      "endState": "Held",
+      "payload": "null",
+      "clock": {
+        "Fork(2)": 5,
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(2) exits state \u0027Free\u0027.",
+      "id": "Fork(2)",
+      "state": "Free",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Fork(2)": 6,
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Fork(2) enters state \u0027Held\u0027.",
+      "id": "Fork(2)",
+      "state": "Held",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Fork(2)": 7,
+        "Philosopher(7)": 6
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Fork(5)\u0027 dequeued event \u0027ePickUp with payload (Philosopher(9))\u0027 in state \u0027Held\u0027.",
+      "id": "Fork(5)",
+      "event": "ePickUp",
+      "state": "Held",
+      "payload": "Philosopher(9)",
+      "clock": {
+        "Fork(5)": 8,
+        "Philosopher(10)": 6,
+        "Philosopher(9)": 11,
+        "Fork(4)": 4
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Philosopher(7)\u0027 dequeued event \u0027ForkGranted with payload (Philosopher(7))\u0027 in state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(7)",
+      "event": "ForkGranted",
+      "state": "TryLeftFirst",
+      "payload": "Philosopher(7)",
+      "clock": {
+        "Philosopher(7)": 7,
+        "Fork(2)": 4
+      }
+    }
+  },
+  {
+    "type": "GotoState",
+    "details": {
+      "log": "Philosopher(7) is transitioning from state \u0027TryLeftFirst\u0027 to state \u0027TryRight\u0027.",
+      "id": "Philosopher(7)",
+      "startState": "TryLeftFirst",
+      "endState": "TryRight",
+      "payload": "null",
+      "clock": {
+        "Philosopher(7)": 8,
+        "Fork(2)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(7) exits state \u0027TryLeftFirst\u0027.",
+      "id": "Philosopher(7)",
+      "state": "TryLeftFirst",
+      "payload": "null",
+      "isEntry": false,
+      "clock": {
+        "Philosopher(7)": 9,
+        "Fork(2)": 4
+      }
+    }
+  },
+  {
+    "type": "StateTransition",
+    "details": {
+      "log": "Philosopher(7) enters state \u0027TryRight\u0027.",
+      "id": "Philosopher(7)",
+      "state": "TryRight",
+      "payload": "null",
+      "isEntry": true,
+      "clock": {
+        "Philosopher(7)": 10,
+        "Fork(2)": 4
+      }
+    }
+  },
+  {
+    "type": "DequeueEvent",
+    "details": {
+      "log": "\u0027Fork(6)\u0027 dequeued event \u0027ePickUp with payload (Philosopher(11))\u0027 in state \u0027Free\u0027.",
+      "id": "Fork(6)",
+      "event": "ePickUp",
+      "state": "Free",
+      "payload": "Philosopher(11)",
+      "clock": {
+        "Fork(6)": 3,
+        "Philosopher(11)": 6
+      }
+    }
+  },
+  {
+    "type": "MonitorProcessEvent",
+    "details": {
+      "log": "NoDeadlock is processing event \u0027ForkGranted with payload (Philosopher(11))\u0027 in state \u0027Monitoring\u0027.",
+      "event": "ForkGranted",
+      "state": "Monitoring",
+      "payload": "Philosopher(11)",
+      "sender": "Fork(6)",
+      "monitor": "NoDeadlock",
+      "clock": {
+        "NoDeadlock": 7,
+        "Fork(2)": 3,
+        "Philosopher(7)": 6,
+        "Fork(4)": 3,
+        "Philosopher(9)": 6,
+        "Fork(3)": 3,
+        "Philosopher(8)": 6,
+        "Fork(5)": 3,
+        "Philosopher(10)": 6,
+        "Fork(6)": 3,
+        "Philosopher(11)": 6
+      }
+    }
+  },
+  {
+    "type": "AssertionFailure",
+    "details": {
+      "log": "Assertion Failed: PSpec\\Deadlock.p:8:7 Deadlock risk: All 5 philosophers hold a fork!",
+      "error": "Assertion Failed: PSpec\\Deadlock.p:8:7 Deadlock risk: All 5 philosophers hold a fork!",
+      "payload": "null"
+    }
+  },
+  {
+    "type": "StrategyDescription",
+    "details": {
+      "log": "Found bug using \u0027random\u0027 strategy.",
+      "payload": "null",
+      "strategy": "random",
+      "strategyDescription": "random[seed \u00272252297837\u0027]"
+    }
+  }
+]

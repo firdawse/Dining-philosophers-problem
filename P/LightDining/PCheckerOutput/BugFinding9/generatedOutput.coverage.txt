@@ -1,0 +1,85 @@
+Total event coverage: 81.8%
+===========================
+StateMachine: Fork
+==================
+Event coverage: 100.0%
+
+	State: Free
+		State event coverage: 100.0%
+		Events received: ePickUp
+		Events sent: eForkTaken
+		Previous states: Held
+		Next states: Held
+
+	State: Held
+		State event coverage: 100.0%
+		Events received: ePickUp, ePutDown
+		Events sent: eForkPicked, eForkReleased
+		Previous states: Free
+		Next states: Free
+
+Monitor: NoDeadlock
+===================
+Event coverage: 100.0%
+
+	State: Init
+		State event coverage: 100.0%
+		Events received: eStart
+		Next states: Monitoring
+
+	State: Monitoring
+		State event coverage: 100.0%
+		Events received: eForkPicked, eForkReleased, eForkTaken, eStart
+		Previous states: DeadlockCheck, Init, Monitoring
+		Next states: DeadlockCheck[hot], Monitoring
+
+	State: DeadlockCheck
+		State event coverage: 100.0%
+		Events received: eForkPicked, eForkReleased, eForkTaken, eStart
+		Next states: DeadlockCheck[hot], Monitoring
+
+StateMachine: Philosopher
+=========================
+Event coverage: 60.0%
+
+	State: Init
+		State event coverage: 100.0%
+		Events received: eStart
+		Events sent: eStart
+		Previous states: Init
+		Next states: Init, WaitingForLeftFirst
+
+	State: WaitingForLeftFirst
+		State event coverage: 100.0%
+		Events received: eForkPicked, eForkTaken
+		Events sent: ePickUp
+		Previous states: Eating, Init
+		Next states: WaitingForRight
+
+	State: WaitingForRightFirst is uncovered
+		Events not covered: eForkPicked, eForkTaken
+
+	State: WaitingForRight
+		State event coverage: 100.0%
+		Events received: eForkPicked, eForkTaken
+		Events sent: ePickUp
+		Previous states: WaitingForLeftFirst
+		Next states: Eating
+
+	State: WaitingForLeft is uncovered
+		Events not covered: eForkPicked, eForkTaken
+
+	State: Eating
+		State event coverage: 100.0%
+		Events received: eForkReleased
+		Events sent: ePutDown
+		Previous states: WaitingForRight
+		Next states: WaitingForLeftFirst
+
+StateMachine: TestV1
+====================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+
