@@ -80,7 +80,7 @@ Run it again and observe:
 
 ![Logs – Deadlock](figures/screen2.png)
 
-The philosophers now wait forever, no one can proceed. The system is deadlocked.
+The philosophers now wait forever, no one can proceed. **The system is deadlocked!**.
 
 ---
 
