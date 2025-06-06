@@ -1,4 +1,4 @@
-# 🧠 Solving the Dining Philosophers Problem with Akka and P  
+# Solving the Dining Philosophers Problem with Akka and P  
 ### *(Cloud Computing Project – 2025)*
 
 Imagine five philosophers sitting at a round table. Between each pair, a single fork. To eat, a philosopher must hold **both** the left and right forks. But here’s the twist: if everyone reaches for the same fork first, they’ll all wait forever; a classic **deadlock**.
@@ -152,7 +152,7 @@ Philosopher logs should now reflect remote interactions:
 
 ##  Part 2: Modeling with the P Language
 
-Unlike Akka, which executes the system, **P** lets us **formally verify** its behavior — especially deadlock freedom. We model both safe and unsafe versions of the system in P, with the same fork acquisition strategy.
+Unlike Akka, which executes the system, **P** lets us **formally verify** its behavior, especially deadlock freedom. We model both safe and unsafe versions of the system in P, with the same fork acquisition strategy.
 
 ### 🛠 Variants Modeled
 
