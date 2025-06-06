@@ -64,7 +64,7 @@ You can also pass a different number of philosophers(bonus):
 sbt "runMain com.example.Main 7"  
 ```
 
-###  Forcing a Deadlock (For Debugging)
+###  Forcing a Deadlock
 
 To simulate deadlock, make all philosophers pick the **left fork first** by uncommenting this block in `Main.scala`:
 
